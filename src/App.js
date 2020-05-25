@@ -15,8 +15,7 @@ const App = () => {
       // If the API request is successful 
       setTimeout(() => {
         scrollToTop();
-        setValues({});
-        setErrors({});
+        resetForm();
         setCommitting(false);
         setAlert({
           type: 'success',
@@ -31,9 +30,9 @@ const App = () => {
     values,
     errors,
     setValues,
-    setErrors,
     handleChange,
     handleSubmit,
+    resetForm,
     scrollToTop,
     FormSubmit,
     setCommitting,

@@ -90,7 +90,6 @@ const useForm = (callback, validate) => {
     values,
     errors,
     setValues,
-    setErrors,
     handleChange,
     handleSubmit,
     resetForm,
