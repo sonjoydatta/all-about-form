@@ -1,0 +1,102 @@
+:root {
+  --main-text: #091e42;
+  --error: #F00000;
+  --input-bg: rgba(9, 30, 66, 0.04);
+  --input-bg-focus: rgba(9, 30, 66, 0.08);
+  --button-primary: rgba(38, 132, 255);
+  --button-primary-hover: rgba(7, 71, 166);
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--main-text);
+}
+
+.Form {
+  max-width: 350px;
+  margin: 50px auto;
+}
+.FormGroup {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.FormGroup label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.FormControl {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  display: block;
+  padding: 0 15px;
+  line-height: 40px;
+  border-radius: 4px;
+  border: 0;
+  background-color: var(--input-bg);
+  transition: all 0.3s ease-in-out;
+}
+.FormControl:focus {
+  outline: none;
+  background-color: var(--input-bg-focus);
+}
+.FormControl-Invalid {
+  font-size: 12px;
+  margin-top: 5px;
+  color: var(--error);
+}
+.FormButton {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 25px;
+  border-radius: 4px;
+  border: 0;
+  background-color: var(--button-primary);
+  transition: all 0.3s ease-in-out;
+}
+.FormButton:focus {
+  outline: none;
+}
+.FormButton:not(:disabled):hover {
+  background-color: var(--button-primary-hover);
+}
+.FormButton:disabled {
+  cursor: not-allowed;
+  opacity: .75;
+}
+
+.AlertMessage {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.AlertMessage.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.AlertMessage.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.AlertMessage-Close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 21px;
+}
